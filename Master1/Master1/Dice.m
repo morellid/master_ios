@@ -15,4 +15,16 @@
     return rand() % 6;
 }
 
+- (int)rollWithMax:(int)max
+{
+    return rand() % max;
+}
+
+- (int)rollWithMin:(int)min andMax:(int)max
+{
+    return min + rand() % (max - min);
+}
+
+
+
 @end

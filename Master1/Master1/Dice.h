@@ -12,4 +12,8 @@
 
 - (int) roll;
 
+- (int) rollWithMax: (int) max;
+
+- (int) rollWithMin: (int) min andMax: (int) max;
+
 @end
