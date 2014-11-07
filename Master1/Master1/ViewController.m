@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Dice.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+    //id dice = [[Dice alloc] init];
+    id dice = [[NSObject alloc] init];
+    int num = [dice roll];
+    NSLog(@"%i", num);
 }
 
 - (void)didReceiveMemoryWarning {
