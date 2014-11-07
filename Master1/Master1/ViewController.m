@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    id dice = [[Dice alloc] init];
+    Dice *dice = [[Dice alloc] init];
     int num = [dice roll];
     NSLog(@"%i", num);
 }
