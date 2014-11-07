@@ -1,5 +1,5 @@
 //
-//  Dice.h
+//  Board.h
 //  Master1
 //
 //  Created by Davide Morelli on 07/11/14.
@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Dadosita.h"
 
-@interface Dice : NSObject <Dadosita>
+@interface Board : NSObject
 
-@property int lastValue;
+@property NSSet *listOfDice;
 
-- (int)roll;
-
+- (int) sumAll;
 
 @end

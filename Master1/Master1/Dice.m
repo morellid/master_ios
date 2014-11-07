@@ -9,22 +9,11 @@
 #import "Dice.h"
 
 @implementation Dice
-
+@synthesize  lastValue = myLastValue;
 - (int)roll
 {
-    return rand() % 6;
+     myLastValue = rand() % 6;
+    return myLastValue;
 }
-
-- (int)rollWithMax:(int)max
-{
-    return rand() % max;
-}
-
-- (int)rollWithMin:(int)min andMax:(int)max
-{
-    return min + rand() % (max - min);
-}
-
-
 
 @end

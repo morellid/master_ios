@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Board.h"
 #import "Dice.h"
 
 @interface ViewController ()
@@ -15,17 +16,18 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
-    Dice *dice = [[Dice alloc] init];
-    int num = [dice roll];
-    NSLog(@"%i", num);
-
-    num = [dice rollWithMin:0 andMax:10];
-    NSLog(@"%i", num);
+    Board *board = [[Board alloc] init];
+    board.listOfDice = [NSSet setWithArray:
+                        [NSArray arrayWithObjects:
+                         [[Dice alloc] init],
+                         [[Dice alloc] init], nil]];
     
+    NSLog(@"sum = %i", [board sumAll]);
+
 }
 
 - (void)didReceiveMemoryWarning {

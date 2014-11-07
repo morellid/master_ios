@@ -1,5 +1,5 @@
 //
-//  Dice.h
+//  Dadosita.h
 //  Master1
 //
 //  Created by Davide Morelli on 07/11/14.
@@ -7,13 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Dadosita.h"
 
-@interface Dice : NSObject <Dadosita>
+@protocol Dadosita <NSObject>
 
-@property int lastValue;
-
-- (int)roll;
-
+- (int) roll;
 
 @end
