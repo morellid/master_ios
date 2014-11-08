@@ -10,4 +10,6 @@
 
 @interface Dice2 : Dice
 
++ (id) instance;
+
 @end
