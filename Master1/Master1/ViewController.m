@@ -27,6 +27,11 @@
                          [[Dice alloc] init], nil]];
     
     NSLog(@"sum = %i", [board sumAll]);
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setFloat:2.0 forKey:@"weigth"];
+    [ud synchronize];
+
 
 }
 
