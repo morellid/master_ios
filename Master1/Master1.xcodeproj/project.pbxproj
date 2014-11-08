@@ -14,6 +14,11 @@
 		A033E7031A0CC4CF00AECD14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A033E7021A0CC4CF00AECD14 /* Images.xcassets */; };
 		A033E7061A0CC4CF00AECD14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A033E7041A0CC4CF00AECD14 /* LaunchScreen.xib */; };
 		A033E7121A0CC4CF00AECD14 /* Master1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A033E7111A0CC4CF00AECD14 /* Master1Tests.m */; };
+		A0DAC4EC1A0E27A100681576 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DAC4E21A0E27A100681576 /* Board.m */; };
+		A0DAC4ED1A0E27A100681576 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DAC4E51A0E27A100681576 /* Dice.m */; };
+		A0DAC4EE1A0E27A100681576 /* Dice+Jon.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DAC4E71A0E27A100681576 /* Dice+Jon.m */; };
+		A0DAC4EF1A0E27A100681576 /* Dice2.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DAC4E91A0E27A100681576 /* Dice2.m */; };
+		A0DAC4F01A0E27A100681576 /* MarbleDice.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DAC4EB1A0E27A100681576 /* MarbleDice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,17 @@
 		A033E70B1A0CC4CF00AECD14 /* Master1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Master1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A033E7101A0CC4CF00AECD14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A033E7111A0CC4CF00AECD14 /* Master1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Master1Tests.m; sourceTree = "<group>"; };
+		A0DAC4E11A0E27A100681576 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		A0DAC4E21A0E27A100681576 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
+		A0DAC4E31A0E27A100681576 /* Dadosita.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dadosita.h; sourceTree = "<group>"; };
+		A0DAC4E41A0E27A100681576 /* Dice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
+		A0DAC4E51A0E27A100681576 /* Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
+		A0DAC4E61A0E27A100681576 /* Dice+Jon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Dice+Jon.h"; sourceTree = "<group>"; };
+		A0DAC4E71A0E27A100681576 /* Dice+Jon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Dice+Jon.m"; sourceTree = "<group>"; };
+		A0DAC4E81A0E27A100681576 /* Dice2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dice2.h; sourceTree = "<group>"; };
+		A0DAC4E91A0E27A100681576 /* Dice2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dice2.m; sourceTree = "<group>"; };
+		A0DAC4EA1A0E27A100681576 /* MarbleDice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarbleDice.h; sourceTree = "<group>"; };
+		A0DAC4EB1A0E27A100681576 /* MarbleDice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarbleDice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +97,17 @@
 		A033E6F41A0CC4CF00AECD14 /* Master1 */ = {
 			isa = PBXGroup;
 			children = (
+				A0DAC4E11A0E27A100681576 /* Board.h */,
+				A0DAC4E21A0E27A100681576 /* Board.m */,
+				A0DAC4E31A0E27A100681576 /* Dadosita.h */,
+				A0DAC4E41A0E27A100681576 /* Dice.h */,
+				A0DAC4E51A0E27A100681576 /* Dice.m */,
+				A0DAC4E61A0E27A100681576 /* Dice+Jon.h */,
+				A0DAC4E71A0E27A100681576 /* Dice+Jon.m */,
+				A0DAC4E81A0E27A100681576 /* Dice2.h */,
+				A0DAC4E91A0E27A100681576 /* Dice2.m */,
+				A0DAC4EA1A0E27A100681576 /* MarbleDice.h */,
+				A0DAC4EB1A0E27A100681576 /* MarbleDice.m */,
 				A033E6F91A0CC4CF00AECD14 /* AppDelegate.h */,
 				A033E6FA1A0CC4CF00AECD14 /* AppDelegate.m */,
 				A033E6FC1A0CC4CF00AECD14 /* ViewController.h */,
@@ -219,9 +246,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DAC4ED1A0E27A100681576 /* Dice.m in Sources */,
 				A033E6FE1A0CC4CF00AECD14 /* ViewController.m in Sources */,
 				A033E6FB1A0CC4CF00AECD14 /* AppDelegate.m in Sources */,
+				A0DAC4EC1A0E27A100681576 /* Board.m in Sources */,
+				A0DAC4EE1A0E27A100681576 /* Dice+Jon.m in Sources */,
+				A0DAC4EF1A0E27A100681576 /* Dice2.m in Sources */,
 				A033E6F81A0CC4CF00AECD14 /* main.m in Sources */,
+				A0DAC4F01A0E27A100681576 /* MarbleDice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +444,7 @@
 				A033E7171A0CC4CF00AECD14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A033E7181A0CC4CF00AECD14 /* Build configuration list for PBXNativeTarget "Master1Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +453,7 @@
 				A033E71A1A0CC4CF00AECD14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
