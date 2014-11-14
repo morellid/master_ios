@@ -28,10 +28,21 @@
     
     NSLog(@"sum = %i", [board sumAll]);
     
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    [ud setFloat:2.0 forKey:@"weigth"];
-    [ud synchronize];
 
+    int mul = 10;
+    
+    void (^testBlock)(int) = ^(int a){
+        NSLog(@"Integer is: %i", a * mul);
+    };
+    
+    testBlock(1);
+    mul = 20;
+
+    void (^testBlock2)(int) = ^(int a){
+        NSLog(@"Integer is: %i", a * mul);
+    };
+
+    testBlock2(1);
 
 }
 
