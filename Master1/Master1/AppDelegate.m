@@ -42,14 +42,19 @@
     }];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        while(YES)
-        {
-            float timeLeft = [application backgroundTimeRemaining];
-            NSLog(@"time left = %f", timeLeft);
-            [NSThread sleepForTimeInterval:1.0];
-        }
-        //[application endBackgroundTask:bgTask];
-        //bgTask = UIBackgroundTaskInvalid;
+
+        NSLog(@"entered background");
+        [NSThread sleepForTimeInterval:5.0];
+
+        NSLog(@"scheduling local notification");
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.fireDate = [[NSDate date] dateByAddingTimeInterval:5.0] ;
+        notification.alertBody = @"ciao!";
+        notification.applicationIconBadgeNumber = 1;
+        [application scheduleLocalNotification:notification];
+        
+        [application endBackgroundTask:bgTask];
+        bgTask = UIBackgroundTaskInvalid;
     });
     
 }
@@ -62,6 +67,10 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     NSLog(@"applicationDidBecomeActive:");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    UIUserNotificationType types = UIUserNotificationTypeSound | UIUserNotificationTypeBadge | UIUserNotificationTypeAlert;
+    UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
