@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Categoria" representedClassName="Categoria" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priorita" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TODOItem" inverseName="category" inverseEntity="TODOItem" syncable="YES"/>
+    </entity>
+    <entity name="TODOItem" representedClassName="TODOItem" syncable="YES">
+        <attribute name="myDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categoria" inverseName="items" inverseEntity="Categoria" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Categoria" positionX="-9" positionY="54" width="128" height="90"/>
+        <element name="TODOItem" positionX="-45" positionY="0" width="128" height="73"/>
+    </elements>
+</model>
