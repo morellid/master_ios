@@ -22,15 +22,18 @@ class ViewController: UIViewController {
             if mm.deviceMotionAvailable
             {
                 NSLog("device available")
-                mm.accelerometerUpdateInterval = 1.0/10.0
-                mm.startAccelerometerUpdatesToQueue(NSOperationQueue(), withHandler: { (accData, error) -> Void in
-                    
-                    let mag = sqrt(accData.acceleration.x*accData.acceleration.x + accData.acceleration.y*accData.acceleration.y+accData.acceleration.z*accData.acceleration.z)
-                    NSLog("x=%f y=%f z=%f mag=%f",
-                        accData.acceleration.x,
-                        accData.acceleration.y,
-                        accData.acceleration.z, mag)
-                })
+                if mm.gyroAvailable
+                {
+                    mm.gyroUpdateInterval = 1.0/10.0
+                    mm.startGyroUpdatesToQueue(NSOperationQueue(), withHandler: { (gyroData, error) -> Void in
+                        NSLog("x=%f y=%f z=%f",
+                            gyroData.rotationRate.x,
+                            gyroData.rotationRate.y,
+                            gyroData.rotationRate.z)
+                        
+                    })
+                }
+
             } else
             {
                 NSLog("device NOT available")
