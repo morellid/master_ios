@@ -11,33 +11,20 @@ import CoreMotion
 
 class ViewController: UIViewController {
 
-    var motionManager : CMMotionManager?
+    var activityManager : CMMotionActivityManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        motionManager = CMMotionManager()
-        if let mm = motionManager
-        {
-            if mm.deviceMotionAvailable
-            {
-                NSLog("device available")
-                if mm.gyroAvailable
-                {
-                    mm.gyroUpdateInterval = 1.0/10.0
-                    mm.startGyroUpdatesToQueue(NSOperationQueue(), withHandler: { (gyroData, error) -> Void in
-                        NSLog("x=%f y=%f z=%f",
-                            gyroData.rotationRate.x,
-                            gyroData.rotationRate.y,
-                            gyroData.rotationRate.z)
-                        
-                    })
-                }
 
-            } else
-            {
-                NSLog("device NOT available")
-            }
+        if CMMotionActivityManager.isActivityAvailable()
+        {
+            activityManager = CMMotionActivityManager()
+            activityManager?.startActivityUpdatesToQueue(NSOperationQueue(),
+                withHandler: { (activity) -> Void in
+                    NSLog("unknown:\(activity.unknown) stationary:\(activity.stationary) walking:\(activity.walking) running:\(activity.running) automotive:\(activity.automotive) \(activity.confidence.rawValue)")
+                    
+            })
         }
     }
 
