@@ -59,6 +59,19 @@
     
 }
 
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    NSLog(@"willFinishLaunchingWithOptions");
+    NSLog(@"%@", launchOptions);
+    return YES;
+    
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    NSLog(@"didReceiveLocalNotification");
+}
+
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     NSLog(@"applicationWillEnterForeground:");
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
@@ -77,12 +90,6 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     NSLog(@"applicationWillTerminate:");
 
-}
-
-- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    NSLog(@"willFinishLaunchingWithOptions:");
-    return YES;
 }
 
 

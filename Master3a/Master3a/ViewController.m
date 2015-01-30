@@ -7,16 +7,31 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
+#import "Categorie.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *myLabel;
 
 @end
 
 @implementation ViewController
+- (IBAction)transpose:(id)sender {
+    [UIView animateWithDuration:5.0 animations:^{
+        _myLabel.alpha = 0.0;
+    }];
+}
+- (IBAction)rotate:(id)sender {
+    [UIView animateWithDuration:5.0 animations:^{
+        _myLabel.alpha = 1.0;
+    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
