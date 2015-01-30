@@ -20,11 +20,22 @@ class ViewController: UIViewController {
         if CMMotionActivityManager.isActivityAvailable()
         {
             activityManager = CMMotionActivityManager()
-            activityManager?.startActivityUpdatesToQueue(NSOperationQueue(),
-                withHandler: { (activity) -> Void in
-                    NSLog("unknown:\(activity.unknown) stationary:\(activity.stationary) walking:\(activity.walking) running:\(activity.running) automotive:\(activity.automotive) \(activity.confidence.rawValue)")
+            let yesterday = NSDate().dateByAddingTimeInterval(-60*60*24)
+            let today = NSDate()
+            if let am = activityManager
+            {
+                am.queryActivityStartingFromDate(yesterday, toDate: today, toQueue: NSOperationQueue(), withHandler: { (activities, error) -> Void in
+                    for activity in activities as [CMMotionActivity]
+                    {
+                        if activity.automotive
+                        {
+                            NSLog("\(activity.startDate)")
+                        }
+                        //NSLog("\(activity.startDate) \(activity.stationary) \(activity.unknown) \(activity.automotive)")
+                    }
                     
-            })
+                })
+            }
         }
     }
 
