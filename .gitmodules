@@ -1,0 +1,3 @@
+[submodule "CameraTutorial"]
+	path = CameraTutorial
+	url = git@github.com:jquave/CameraTutorial.git
