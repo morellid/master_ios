@@ -13,6 +13,8 @@
 		A0CEA08C1A84CB5600F0A4E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0CEA08B1A84CB5600F0A4E2 /* Images.xcassets */; };
 		A0CEA08F1A84CB5600F0A4E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0CEA08D1A84CB5600F0A4E2 /* LaunchScreen.xib */; };
 		A0CEA09B1A84CB5600F0A4E2 /* testFBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CEA09A1A84CB5600F0A4E2 /* testFBTests.swift */; };
+		A0CEA0A51A84CB9600F0A4E2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CEA0A41A84CB9600F0A4E2 /* Social.framework */; };
+		A0CEA0A71A84CDC300F0A4E2 /* tate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0CEA0A61A84CDC300F0A4E2 /* tate.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		A0CEA0941A84CB5600F0A4E2 /* testFBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testFBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CEA0991A84CB5600F0A4E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0CEA09A1A84CB5600F0A4E2 /* testFBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testFBTests.swift; sourceTree = "<group>"; };
+		A0CEA0A41A84CB9600F0A4E2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A0CEA0A61A84CDC300F0A4E2 /* tate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tate.jpg; path = ../../../../../tate.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0CEA0A51A84CB9600F0A4E2 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +64,7 @@
 		A0CEA0761A84CB5600F0A4E2 = {
 			isa = PBXGroup;
 			children = (
+				A0CEA0A41A84CB9600F0A4E2 /* Social.framework */,
 				A0CEA0811A84CB5600F0A4E2 /* testFB */,
 				A0CEA0971A84CB5600F0A4E2 /* testFBTests */,
 				A0CEA0801A84CB5600F0A4E2 /* Products */,
@@ -77,6 +83,7 @@
 		A0CEA0811A84CB5600F0A4E2 /* testFB */ = {
 			isa = PBXGroup;
 			children = (
+				A0CEA0A61A84CDC300F0A4E2 /* tate.jpg */,
 				A0CEA0841A84CB5600F0A4E2 /* AppDelegate.swift */,
 				A0CEA0861A84CB5600F0A4E2 /* ViewController.swift */,
 				A0CEA0881A84CB5600F0A4E2 /* Main.storyboard */,
@@ -193,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0CEA08A1A84CB5600F0A4E2 /* Main.storyboard in Resources */,
+				A0CEA0A71A84CDC300F0A4E2 /* tate.jpg in Resources */,
 				A0CEA08F1A84CB5600F0A4E2 /* LaunchScreen.xib in Resources */,
 				A0CEA08C1A84CB5600F0A4E2 /* Images.xcassets in Resources */,
 			);

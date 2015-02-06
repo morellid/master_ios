@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func postOnFB(sender: AnyObject) {
+        var fb = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        fb.setInitialText("ciao dal corso iOS")
+        fb.addImage(UIImage(named: "tate.jpg"))
+        self.presentViewController(fb, animated: true) { () -> Void in
+            //
+        }
+    }
 
 }
 
