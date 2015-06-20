@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
+    </dependencies>
+    <scenes>
+        <!--pagina 1-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="pagina 1" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label alignment="left" text="ciao mamma" id="vh2-IV-Cqv"/>
+                    </items>
+                    <connections>
+                        <segue destination="vin-3f-YRM" kind="relationship" relationship="nextPage" id="xW0-6H-YYG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--pagina 2-->
+        <scene sceneID="tUe-sP-yd7">
+            <objects>
+                <controller title="pagina 2" hidesWhenLoading="NO" id="vin-3f-YRM" customClass="Pagina2InterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="Button" id="Mkf-yt-eow">
+                            <connections>
+                                <action selector="bottonePigiato" destination="vin-3f-YRM" id="8Ig-hK-dPf"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="bottone" destination="Mkf-yt-eow" id="O6k-Qp-kkT"/>
+                        <segue destination="aS3-PD-Hic" kind="relationship" relationship="nextPage" id="evO-oe-Mxw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="424" y="345"/>
+        </scene>
+        <!--pagina 3-->
+        <scene sceneID="3wl-SW-avO">
+            <objects>
+                <controller title="pagina 3" hidesWhenLoading="NO" id="aS3-PD-Hic">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="nLt-W3-oGn"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="613" y="341"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="739"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="739"/>
+        </scene>
+    </scenes>
+</document>

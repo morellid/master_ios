@@ -1,3 +1,6 @@
 [submodule "CameraTutorial"]
 	path = CameraTutorial
 	url = git@github.com:jquave/CameraTutorial.git
+[submodule "GKSessionP2P"]
+	path = GKSessionP2P
+	url = https://github.com/shrtlist/GKSessionP2P.git
